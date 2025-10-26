@@ -1,0 +1,34 @@
+{
+  "name": "promo-2024-cncn3.0",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CNCN 3.0 in 2024 Promotion Site",
+  "author": "cancaonovachor",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "dev": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "eslint-plugin-flowtype": "8.0.3",
+    "firebase": "^10.14.1",
+    "gatsby": "^5.13.7",
+    "gatsby-plugin-sass": "^6.13.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-responsive": "^9.0.2",
+    "sass": "^1.79.5"
+  },
+  "engines": {
+    "node": ">= 18"
+  }
+}
