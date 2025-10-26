@@ -1,0 +1,61 @@
+name: Deploy to Firebase Hosting
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'cncn/**'
+  workflow_dispatch:
+
+jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      sites: ${{ steps.filter.outputs.changes }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            promo-2025-cncn4:
+              - 'cncn/promo-2025-cncn4/**'
+
+  deploy:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.sites != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        site: ${{ fromJSON(needs.detect-changes.outputs.sites) }}
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        working-directory: cncn/${{ matrix.site }}
+        run: pnpm install --frozen-lockfile
+
+      - name: Build site
+        working-directory: cncn/${{ matrix.site }}
+        run: pnpm run build
+
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: cn-static
+          channelId: live
+          entryPoint: cncn
+          target: ${{ matrix.site }}

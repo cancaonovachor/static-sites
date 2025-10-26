@@ -1,6 +1,7 @@
 {
   "hosting": {
-    "public": "public",
+    "site": "promo-2025-cncn4",
+    "public": "promo-2025-cncn4/public",
     "ignore": [
       "firebase.json",
       "**/.*",
