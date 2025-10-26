@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `CancaoNova Chorus Next 3.0`,
+    title: `CancaoNova Chorus Next 4.0`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: ['gatsby-plugin-sass'],
