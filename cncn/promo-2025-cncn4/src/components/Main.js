@@ -17,6 +17,7 @@ import access from '../images/access.jpg'
 import kawata from '../images/kawata.png'
 import odorimai from '../images/odorimai.jpg'
 import ito from '../images/ito.jpg'
+import keyvisual from '../images/keyvisual.png'
 import { useMediaQuery } from 'react-responsive'
 
 
@@ -361,17 +362,17 @@ const Main = (props) => {
         <h3>入場チケット (PassMarket)</h3>
         <span className="image-main main">
           <a
-            href="https://passmarket.yahoo.co.jp/event/show/detail/02xa3q79et141.html"
+            href="https://passmarket.yahoo.co.jp/event/show/detail/02s2vd2istr41.html"
             target="_blank"
           >
-            <img src={nyujo} alt="" />
+            <img src={keyvisual} alt="" />
           </a>
         </span>
         <p>
           演奏会への入場チケットは
           <a
             className="use-border"
-            href="https://passmarket.yahoo.co.jp/event/show/detail/02xa3q79et141.html"
+            href="https://passmarket.yahoo.co.jp/event/show/detail/02s2vd2istr41.html"
             target="_blank"
           >
             こちら
@@ -379,8 +380,8 @@ const Main = (props) => {
           <br />
           私たちが選んだ珠玉の名曲と培ってきたテクノロジーの力を活用し、合唱の今と未来を描き出します。是非とも現場にてお聞き下さい。
         </p>
-        <br />
-        <h3>配信チケット (ZAIKO)</h3>
+        {/* <br /> */}
+        {/* <h3>配信チケット (ZAIKO)</h3>
         <span className="image-main main">
           <a
             className="use-border"
@@ -401,7 +402,7 @@ const Main = (props) => {
           </a>
           <br />
           遠方にお住まいの方や当日現地にお越し頂けない方も、こちらよりライブ配信を視聴いただけます。
-        </p>
+        </p> */}
         {close}
       </article>
 
