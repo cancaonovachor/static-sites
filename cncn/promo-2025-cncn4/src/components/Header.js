@@ -46,20 +46,20 @@ const Header = (props) => {
           </a>
         </h2> */}
           <h2>2026年3月15日 (日) </h2>
-          {/* <p>1st Session 13:00-14:00</p>
+          <p>1st Session 13:00-14:00</p>
         <p>2nd Session 14:00-15:30</p>
-        <p>3rd Session 15:30-16:30</p> */}
+        <p>3rd Session 15:30-16:30</p>
           <h2>
             デザイン・クリエイティブセンター神戸 {isMobile && <br />}KIITOホール
           </h2>
-          <div style={{ height: '1rem' }}></div>
+          {/* <div style={{ height: '1rem' }}></div>
           <h1>チケット販売まで</h1>
           <h1>
             <Countdown targetDate={target} />
-          </h1>
+          </h1> */}
         </div>
       </div>
-      {/* <nav>
+      <nav>
       <ul>
         <li>
           <a
@@ -105,11 +105,11 @@ const Header = (props) => {
             // target="_blank"
           >
             Ticket
-            ここはコメントアウトだった Ticket <FontAwesomeIcon icon={faExternalLinkAlt} /> 
+            {/* ここはコメントアウトだった Ticket <FontAwesomeIcon icon={faExternalLinkAlt} />  */}
           </a>
         </li>
       </ul>
-    </nav> */}
+    </nav>
     </header>
   )
 }

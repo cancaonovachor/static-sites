@@ -69,7 +69,7 @@ const Main = (props) => {
           <iframe
             width="560"
             height="350"
-            src="https://www.youtube.com/embed/hqiTs_N3a5A?si=-SYqs7tBLX_xIOOl"
+            src="https://www.youtube.com/embed/XNWAqTNFFLc?si=pGVo7jmn87dS9wix"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -82,7 +82,7 @@ const Main = (props) => {
             CancaoNova
           </a>
           {' '}
-          3回目の定期演奏会
+          4回目の定期演奏会
         </p>
         <p>
           私たちが選んだ珠玉の名曲と培ってきたテクノロジーの力を活用し、合唱の今と未来を描き出します。
@@ -121,21 +121,20 @@ const Main = (props) => {
         </p>
         <p>
           入場料￥2500 前売り￥2000
-          <br />※前売り価格は2/8 23:59までです。
+          <br />※前売り価格は2/15 23:59までです。
           <br />※学生の方は全期間を通して各料金から500円引きです。
         </p>
         <p>時間：13:00〜</p>
         <p>
           演奏予定曲：
-          <br />・Matona mia cara - Orlande de Lassus
-          <br />・Contrapunto bestiale alla mente - Adriano Banchieri
-          <br />・Mass for 3 Voices より Kyrie, Gloria, Sanctus, Benedictus, Agnus Dei
-          <br />　- William Byrd
-          <br />・Nonsense Madrigals より The Alphabet, The Lobster Quadrille
-          <br />　- Ligeti György
-          <br />・Tenebrae - Marcus Ludwig
-          <br />・秋の歌 - 南弘明
-          <br />・Furusato - Philip Lawson (arr.)
+          <br />・彼岸花 (多田 武彦)
+          <br />・薔薇よ (三善 晃)
+          <br />・Fleur de quinze ans (Orlande de Lassus)
+          <br />・Hymne au printemps (Camille Saint-Saëns)
+          <br />・Nonsense Madrigalsより (Ligeti György)
+          <br />　・The Alphabet
+          <br />　・The Lobster Quadriile
+          <br />・Mass for 3 Voices（William Byrd）
         </p>
         {/* <p>
           <a
@@ -156,7 +155,7 @@ const Main = (props) => {
         </p> */}
         <p>
           {/* <b>ピアニスト: 小鳥舞</b> */}
-          ピアニスト: 小鳥舞
+          {/* ピアニスト: 小鳥舞 */}
           {/* <span className="image-main main">
             <img src={odorimai} alt="" />
           </span> */}
@@ -177,8 +176,8 @@ const Main = (props) => {
         </span>
         <h3>2nd Session</h3>
         <p>
-          様々なゲストをお招きして「今ここにある合唱」を皆さまとともに考えます。
-          カフェスペースでくつろぎながら、特別ゲストとの座談会、各地の合唱団の演奏、ポスターセッションなど多様な企画をお楽しみください。※神戸ファッションプラザ 3F サン広場にて開催します。
+          全国的な活動を通じて知り合ってきた様々なゲストとともに、今年も「今ここにある合唱」を描き出し、皆さんとともに考えます。<br />
+          地元の美味しいコーヒーとチョコレートを堪能しつつ、特別ゲストとの座談会、全国各地の合唱団の演奏、パネルディスカッションなど多様な企画をお楽しみください。
         </p>
         <p>
           料金：無料（どなたでもご来場いただけます)
@@ -206,12 +205,16 @@ const Main = (props) => {
           <b>After Times</b>
         </a> */}
         ・
-        <a className="use-border" href="https://x.com/EC_T_Lockers" target="_blank">
-          After Times
+        <a className="use-border" href="https://x.com/camphora_choir" target="_blank">
+          合唱団Camphora
         </a>
         <br />・
-        <a className="use-border" href="https://x.com/konan_glee" target="_blank">
-          甲南大学文化会グリークラブ
+        <a className="use-border" href="https://cestlavie200910.blogspot.com/" target="_blank">
+          女声アンサンブルC'est La Vie
+        </a>
+        <br />・
+        <a className="use-border" href="https://kuc.main.jp/" target="_blank">
+          京大合唱団
         </a>
         <br />・
         <a className="use-border" href="https://x.com/chor_hanamizuki" target="_blank">
@@ -251,10 +254,10 @@ const Main = (props) => {
           <br /> */}
           <a
             className="use-border"
-            href="https://yugecoffee.com/"
+            href="https://www.instagram.com/kwkmcoffee/"
             target="_blank"
           >
-            <b>ゆげ焙煎所</b>
+            <b>川上珈琲</b>
           </a>
           {/* <span className="image-main main">
             <img src={yuge} alt="" />
@@ -279,26 +282,26 @@ const Main = (props) => {
         </span>
         <h3>3rd Session</h3>
         <p>
-          「怖くて美しい」 - 陰翳礼賛 - をコンセプトに、日本をテーマにした楽曲を集めました。
-          音楽とテクノロジーが融合したデジタルアートステージをどうごお楽しみください。
+          「やがて朽ちゆく、永遠」<br />
+          培ってきたデジタルアート技術を最大限活用し、新たな合唱の地平を切り開きます。
         </p>
         <p>
           入場料￥2500 前売り￥2000
-          <br />※前売りは2/8 23:59までです。
+          <br />※前売りは2/15 23:59までです。
           <br />※3rd Sessionには学生割引は存在しません、ご承知おきください。
         </p>
         <p>時間： 15:30〜</p>
         <p>
           {' '}
           演奏予定曲：
-          <br />・とおりゃんせ - 下薗大樹（arr.）
-          <br />・Toryanse - 佐々木みほ（arr.）
-          <br />・ほたるこい - 小倉朗 （arr.）
-          <br />・白牡丹 - 多田武彦
-          <br />・夜まはり - 多田武彦
-          <br />・江戸子守唄 - 千原英喜
-          <br />・さくら - 武満徹（arr.）
-          <br />・Sora/Mizu - Matthew Whittall
+          <br />・君が代
+          <br />・上を向いて歩こう (編曲 北村協一)     
+          <br />・中国地方の子守歌 (編曲 三善晃)
+          <br />・夕焼小焼 (編曲 三善晃)
+          <br />・Furusato (編曲 Philip Lawson)
+          <br />・マツリマツル (鈴木憲夫)
+          <br />・もちつき (三木稔)
+          <br />・天の川 (藤嶋美穂)
         </p>
         {/* <p>
           <a
