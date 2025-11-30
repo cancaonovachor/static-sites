@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-// import pic02 from '../images/shirotokamojinashi.png'
+import pic02 from '../images/shirotokamojinashi.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
@@ -25,11 +25,11 @@ const Header = (props) => {
 
   return (
     <header id="header" style={props.timeout ? { display: 'none' } : {}}>
-      {/* <div className="logo">
+      <div className="logo">
       <a href="https://cancaonovachor.com/">
         <img src={pic02} alt="" />
       </a>
-    </div> */}
+    </div>
       <div className="content">
         <div className="inner">
           <h1>
@@ -97,15 +97,15 @@ const Header = (props) => {
         <li>
           <a
             className="use-border"
-            // href="javascript:;"
-            // onClick={() => {
-            //   props.onOpenArticle('ticket')
-            // }}
-            href="https://passmarket.yahoo.co.jp/event/show/detail/02s2vd2istr41.html"
-            target="_blank"
+            href="javascript:;"
+            onClick={() => {
+              props.onOpenArticle('ticket')
+            }}
+            // href="https://passmarket.yahoo.co.jp/event/show/detail/02s2vd2istr41.html"
+            // target="_blank"
           >
-            {/* Ticket */}
-            Ticket <FontAwesomeIcon icon={faExternalLinkAlt} /> 
+            Ticket
+            {/* Ticket <FontAwesomeIcon icon={faExternalLinkAlt} />  */}
           </a>
         </li>
       </ul>
