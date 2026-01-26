@@ -40,6 +40,7 @@ const Main = (props) => {
   )
   // const isSp = useSp()
   const [isSp, setIsSp] = useState(false);
+  const [activeSessionTab, setActiveSessionTab] = useState('1st');
 
   useEffect(() => {
     const handleResize = () => {
@@ -117,238 +118,165 @@ const Main = (props) => {
         style={{ display: 'none' }}
       >
         <h2 className="major">Stage</h2>
-        <span className="image-main main">
-          <img src={zentai} alt="" />
-        </span>
-        <h3>1st Session</h3>
-        <p>
-          今年度のコンクール・演奏会で演奏した曲を中心に、詳細な解説を交えてお届けします。
-        </p>
-        <p>
-          入場料￥2500 前売り￥2000
-          <br />※前売り価格は2/15 23:59までです。
-          <br />※学生の方は全期間を通して各料金から500円引きです。
-        </p>
-        <p>時間：13:00〜</p>
-        <p>
-          演奏予定曲：
-          <br />・彼岸花 (多田 武彦)
-          <br />・薔薇よ (三善 晃)
-          <br />・Fleur de quinze ans (Orlande de Lassus)
-          <br />・Hymne au printemps (Camille Saint-Saëns)
-          <br />・Nonsense Madrigalsより (Ligeti György)
-          <br />　・The Alphabet
-          <br />　・The Lobster Quadriile
-          <br />・Mass for 3 Voices（William Byrd）
-        </p>
-        {/* <p>
-          <a
-            className="use-border"
-            href="https://twitter.com/honmachi169/"
-            target="_blank"
+
+        <div className="session-tabs">
+          <button
+            className={`session-tab ${activeSessionTab === '1st' ? 'active' : ''}`}
+            onClick={() => setActiveSessionTab('1st')}
           >
-            <b>MC: 川田一輝</b>
-          </a>
-          <span className="image-main main">
-            <img src={kawata} alt="" />
-          </span>
-        </p>
-        <p>
-          1990年大阪生まれ。地元Kiss FM
-          KOBEのラジオDJ・声優・イベントMCなど幅広く活動。
-          子ども達に魚の魅力を伝える「さかなのおにいさん」として書籍の執筆や、テレビ東京「シナぷしゅ」での音楽・アニメーションなども制作。メディア出演・クリエイターとしてもマルチに活動している。
-        </p> */}
-        <p>
-          {/* <b>ピアニスト: 小鳥舞</b> */}
-          {/* ピアニスト: 小鳥舞 */}
-          {/* <span className="image-main main">
-            <img src={odorimai} alt="" />
-          </span> */}
-        </p>
-        {/* <p>
-          武庫川女子大学音楽学部演奏学科卒業。兵庫教育大学大学院修了。
-          武庫川女子大学新人演奏会をはじめ、リーガロイヤルホテルでのコンサート等、様々な演奏会に出演。また、神戸フィルハーモニック、ウクライナ・リヴィウ国際音楽祭にてLviv
-          Virtuosos Academic Chamber Ochestraと共演。
-          東京国際芸術協会より受講費全額助成を受け、ウィーン国立音楽大学マスタークラスを修了し、選抜者コンサートに出演。ディプロマを取得。
-          現在、アンサンブルピアニストとして幅広く活動中。
-          混声合唱フロイデ21、関西大学初等部合唱部常任ピアニスト。
-          これまでに、奈良田朋子、木下千代の各氏に師事。
-        </p> */}
-        <br />
-
-        <span className="image-main main">
-          <img src={secoundSession} alt="" />
-        </span>
-        <h3>2nd Session</h3>
-        <p>
-          全国的な活動を通じて知り合ってきた様々なゲストとともに、今年も「今ここにある合唱」を描き出し、皆さんとともに考えます。<br />
-          地元の美味しいコーヒーとチョコレートを堪能しつつ、特別ゲストとの座談会、全国各地の合唱団の演奏、パネルディスカッションなど多様な企画をお楽しみください。
-        </p>
-        <p>
-          料金：無料（どなたでもご来場いただけます)
-          <br />時間： 14:00〜
-        </p>
-        {/* <br />
-        <h3>基調講演</h3>
-
-        <b>伊東恵司</b>
-        <span className="image-main main">
-          <img src={ito} alt="" />
-        </span>
-        <p>
-          あらゆる形式・ジャンルの合唱指導を行い、宝塚国際室内合唱コンクール等でグランプリ、セギッツィ国際合唱コンクールでは総合2位とMauro
-          Chiocci特別賞を受賞、世界合唱シンポジウムでは2度にわたり特別招待演奏団体に選出され、講師も務める。現在、全国各地で審査員や合唱指導を引き受けるほか「アルティ声楽アンサンブル」等の各種合唱フェスティバルの企画や主催を行っている。現在、日本合唱指揮者協会理事。カワイ出版より「合唱エクササイズ(育成編･運営編・日本語編)」他、ブレーン株式会社より「合唱のイントロダクション」を上梓。「みなづきみのり」のペンネームで作詞活動展開中。
-        </p> */}
-        
-        <h3>合唱協賛</h3>
-
-        <a className="use-border" href="https://kuc.main.jp/" target="_blank">
-          <b>京大合唱団</b>
-        </a>
-        <span className="image-main main">
-          <img src={kyodaiChorus} alt="京大合唱団" />
-        </span>
-        <p>
-          昭和6年創設の学生合唱団。近年はコロナ禍での団員減少で混声のみの活動となっていましたが、2025年度より伝統的な男女混の体制を復活させました。例年、春の発表会やサマーコンサート、冬の定期演奏会を開催し、様々なジャンルの曲に取り組んでいます。
-        </p>
-        <br />
-
-        <a className="use-border" href="https://x.com/camphora_choir" target="_blank">
-          <b>合唱団Camphora</b>
-        </a>
-        <span className="image-main main">
-          <img src={camphoraChorus} alt="合唱団Camphora" />
-        </span>
-        <p>
-          合唱団Camphora(カンフォーラ)です！20代を中心に幅広いメンバーで、林香世先生ご指導のもと活動しています。2025年は多くの演奏機会に恵まれ、団の成長を感じられる一年となりました。2026年も「集いて歌う」喜びを胸に、伸びやかに歌います！
-        </p>
-        <br />
-
-        <a className="use-border" href="https://cestlavie200910.blogspot.com/" target="_blank">
-          <b>女声アンサンブルC'est La Vie</b>
-        </a>
-        <span className="image-main main">
-          <img src={cestLaVieChorus} alt="女声アンサンブルC'est La Vie" />
-        </span>
-        <p>
-          CNCN4.0へのお招きありがとうございます。私達は2009年に結成。山口英樹先生を指揮者にお迎えし17年目を迎えます。メンバーはほぼシニア世代になりましたが、クリアなサウンドを求めて日々奮闘しています。春の風に乗って爽やかな演奏ができますように頑張りたいと思います。どうぞよろしくお願いします。
-        </p>
-        <br />
-
-        <a className="use-border" href="https://x.com/chor_hanamizuki" target="_blank">
-          <b>混声合唱団「花みずき」</b>
-        </a>
-        <span className="image-main main">
-          <img src={hanamizukiChorus} alt="混声合唱団「花みずき」" />
-        </span>
-        <p>
-          尼崎市立立花中学校合唱部の卒業生により2006年に結成。現在は、兵庫県だけでなく全国からメンバーが集い、酒井輝美の音楽観のもと、日々「花みずき」らしい音楽表現を追求している。第4回東京国際合唱コンクール室内部門にて1位金賞および最優秀課題曲賞を受賞し、グランプリコンクールに出場。
-        </p>
-        <br />
-        <h3>飲食協賛</h3>
-        <a className="use-border" href="https://ichiji.net/" target="_blank">
-          <b>ICHIJI</b>
-        </a>
-        {/* <span className="image-main main">
-          <img src={ichiji} alt="" />
-        </span> */}
-        <p>
-          {/* <br />カカオ豆本来の味わいや香りをお届けしたい。
-          <br />そんな思いからICHIJIは生まれました。
-          <br />この思いをカタチにすると
-          <br />チョコレートができるまでの全工程を自社工房で管理し製造する
-          <br />”Bean to Bar Chocolate”になりました。
-          <br />
-          <br />豆の仕入れから選別、焙煎、摩砕、調合、成形まで
-          <br />心をこめて手作業でやらせていただいています。
-          <br />
-          <br />きっと、チョコレートの概念が変わる
-          <br />”Bean to Bar Chocolate”をお楽しみください。
-          <br />
-          <br />
-          皆さんの生活に寄り添うように楽しめて、誰かと食べると会話が生まれる。そんな世界を目指しています。
-          <br />
-          <br /> */}
-          <a
-            className="use-border"
-            href="https://www.instagram.com/kwkmcoffee/"
-            target="_blank"
+            1st Session
+          </button>
+          <button
+            className={`session-tab ${activeSessionTab === '2nd' ? 'active' : ''}`}
+            onClick={() => setActiveSessionTab('2nd')}
           >
-            <b>川上珈琲</b>
-          </a>
-          {/* <span className="image-main main">
-            <img src={yuge} alt="" />
-          </span>
-          <br />2013年、兵庫県西宮市の官公庁が多いエリアで創業。
-          <br />自家焙煎のスペシャルティコーヒー専門店
-          <br />
-          <br />イタリア製の完全熱風式焙煎機を使用
-          <br />毎朝、珈琲豆を丁寧に焙煎しています
-          <br />
-          <br />『心に響くコーヒー』
-          <br />
-          <br />を目指して、日々丁寧に
-          <br />取り組んでいます。
-          <br />
-          <br /> */}
-        </p>
-        <br />
-
-        <span className="image-main main">
-          <img src={kiito_senzai} alt="" />
-        </span>
-        <h3>3rd Session</h3>
-        <p>
-          「やがて朽ちゆく、永遠」<br />
-          培ってきたデジタルアート技術を最大限活用し、新たな合唱の地平を切り開きます。
-        </p>
-        <p>
-          入場料￥2500 前売り￥2000
-          <br />※前売りは2/15 23:59までです。
-          <br />※3rd Sessionには学生割引は存在しません、ご承知おきください。
-        </p>
-        <p>時間： 15:30〜</p>
-        <p>
-          {' '}
-          演奏予定曲：
-          <br />・君が代
-          <br />・上を向いて歩こう (編曲 北村協一)     
-          <br />・中国地方の子守歌 (編曲 三善晃)
-          <br />・夕焼小焼 (編曲 三善晃)
-          <br />・Furusato (編曲 Philip Lawson)
-          <br />・マツリマツル (鈴木憲夫)
-          <br />・もちつき (三木稔)
-          <br />・天の川 (藤嶋美穂)
-        </p>
-        {/* <p>
-          <a
-            className="use-border"
-            href="https://twitter.com/honmachi169/"
-            target="_blank"
+            2nd Session
+          </button>
+          <button
+            className={`session-tab ${activeSessionTab === '3rd' ? 'active' : ''}`}
+            onClick={() => setActiveSessionTab('3rd')}
           >
-            <b>ストーリーテラー: 川田一輝</b>
-          </a>
-          <span className="image-main main">
-            <img src={kawata} alt="" />
-          </span>
-        </p> */}
-        
-        <p>
-          {/* <b>ピアニスト: 小鳥舞</b> */}
-          ピアニスト: 小鳥舞
-          {/* <span className="image-main main">
-            <img src={odorimai} alt="" />
-          </span> */}
-        </p>
-        {/* <p>
-          武庫川女子大学音楽学部演奏学科卒業。兵庫教育大学大学院修了。
-          武庫川女子大学新人演奏会をはじめ、リーガロイヤルホテルでのコンサート等、様々な演奏会に出演。また、神戸フィルハーモニック、ウクライナ・リヴィウ国際音楽祭にてLviv
-          Virtuosos Academic Chamber Ochestraと共演。
-          東京国際芸術協会より受講費全額助成を受け、ウィーン国立音楽大学マスタークラスを修了し、選抜者コンサートに出演。ディプロマを取得。
-          現在、アンサンブルピアニストとして幅広く活動中。
-          混声合唱フロイデ21、関西大学初等部合唱部常任ピアニスト。
-          これまでに、奈良田朋子、木下千代の各氏に師事。
-        </p> */}
+            3rd Session
+          </button>
+        </div>
+
+        {activeSessionTab === '1st' && (
+          <div className="session-content">
+            <span className="image-main main">
+              <img src={zentai} alt="" />
+            </span>
+            <h3>1st Session</h3>
+            <p>
+              今年度のコンクール・演奏会で演奏した曲を中心に、詳細な解説を交えてお届けします。
+            </p>
+            <p>
+              入場料￥2500 前売り￥2000
+              <br />※前売り価格は2/15 23:59までです。
+              <br />※学生の方は全期間を通して各料金から500円引きです。
+            </p>
+            <p>時間：13:00〜</p>
+            <p>
+              演奏予定曲：
+              <br />・彼岸花 (多田 武彦)
+              <br />・薔薇よ (三善 晃)
+              <br />・Fleur de quinze ans (Orlande de Lassus)
+              <br />・Hymne au printemps (Camille Saint-Saëns)
+              <br />・Nonsense Madrigalsより (Ligeti György)
+              <br />　・The Alphabet
+              <br />　・The Lobster Quadriile
+              <br />・Mass for 3 Voices（William Byrd）
+            </p>
+          </div>
+        )}
+
+        {activeSessionTab === '2nd' && (
+          <div className="session-content">
+            <span className="image-main main">
+              <img src={secoundSession} alt="" />
+            </span>
+            <h3>2nd Session</h3>
+            <p>
+              全国的な活動を通じて知り合ってきた様々なゲストとともに、今年も「今ここにある合唱」を描き出し、皆さんとともに考えます。<br />
+              地元の美味しいコーヒーとチョコレートを堪能しつつ、特別ゲストとの座談会、全国各地の合唱団の演奏、パネルディスカッションなど多様な企画をお楽しみください。
+            </p>
+            <p>
+              料金：無料（どなたでもご来場いただけます)
+              <br />時間： 14:00〜
+            </p>
+
+            <h4>合唱協賛</h4>
+
+            <a className="use-border" href="https://kuc.main.jp/" target="_blank">
+              <b>京大合唱団</b>
+            </a>
+            <span className="image-main main">
+              <img src={kyodaiChorus} alt="京大合唱団" />
+            </span>
+            <p>
+              昭和6年創設の学生合唱団。近年はコロナ禍での団員減少で混声のみの活動となっていましたが、2025年度より伝統的な男女混の体制を復活させました。例年、春の発表会やサマーコンサート、冬の定期演奏会を開催し、様々なジャンルの曲に取り組んでいます。
+            </p>
+            <br />
+
+            <a className="use-border" href="https://x.com/camphora_choir" target="_blank">
+              <b>合唱団Camphora</b>
+            </a>
+            <span className="image-main main">
+              <img src={camphoraChorus} alt="合唱団Camphora" />
+            </span>
+            <p>
+              合唱団Camphora(カンフォーラ)です！20代を中心に幅広いメンバーで、林香世先生ご指導のもと活動しています。2025年は多くの演奏機会に恵まれ、団の成長を感じられる一年となりました。2026年も「集いて歌う」喜びを胸に、伸びやかに歌います！
+            </p>
+            <br />
+
+            <a className="use-border" href="https://cestlavie200910.blogspot.com/" target="_blank">
+              <b>女声アンサンブルC'est La Vie</b>
+            </a>
+            <span className="image-main main">
+              <img src={cestLaVieChorus} alt="女声アンサンブルC'est La Vie" />
+            </span>
+            <p>
+              CNCN4.0へのお招きありがとうございます。私達は2009年に結成。山口英樹先生を指揮者にお迎えし17年目を迎えます。メンバーはほぼシニア世代になりましたが、クリアなサウンドを求めて日々奮闘しています。春の風に乗って爽やかな演奏ができますように頑張りたいと思います。どうぞよろしくお願いします。
+            </p>
+            <br />
+
+            <a className="use-border" href="https://x.com/chor_hanamizuki" target="_blank">
+              <b>混声合唱団「花みずき」</b>
+            </a>
+            <span className="image-main main">
+              <img src={hanamizukiChorus} alt="混声合唱団「花みずき」" />
+            </span>
+            <p>
+              尼崎市立立花中学校合唱部の卒業生により2006年に結成。現在は、兵庫県だけでなく全国からメンバーが集い、酒井輝美の音楽観のもと、日々「花みずき」らしい音楽表現を追求している。第4回東京国際合唱コンクール室内部門にて1位金賞および最優秀課題曲賞を受賞し、グランプリコンクールに出場。
+            </p>
+            <br />
+
+            <h4>飲食協賛</h4>
+            <a className="use-border" href="https://ichiji.net/" target="_blank">
+              <b>ICHIJI</b>
+            </a>
+            {' / '}
+            <a
+              className="use-border"
+              href="https://www.instagram.com/kwkmcoffee/"
+              target="_blank"
+            >
+              <b>川上珈琲</b>
+            </a>
+          </div>
+        )}
+
+        {activeSessionTab === '3rd' && (
+          <div className="session-content">
+            <span className="image-main main">
+              <img src={kiito_senzai} alt="" />
+            </span>
+            <h3>3rd Session</h3>
+            <p>
+              「やがて朽ちゆく、永遠」<br />
+              培ってきたデジタルアート技術を最大限活用し、新たな合唱の地平を切り開きます。
+            </p>
+            <p>
+              入場料￥2500 前売り￥2000
+              <br />※前売りは2/15 23:59までです。
+              <br />※3rd Sessionには学生割引は存在しません、ご承知おきください。
+            </p>
+            <p>時間： 15:30〜</p>
+            <p>
+              演奏予定曲：
+              <br />・君が代
+              <br />・上を向いて歩こう (編曲 北村協一)
+              <br />・中国地方の子守歌 (編曲 三善晃)
+              <br />・夕焼小焼 (編曲 三善晃)
+              <br />・Furusato (編曲 Philip Lawson)
+              <br />・マツリマツル (鈴木憲夫)
+              <br />・もちつき (三木稔)
+              <br />・天の川 (藤嶋美穂)
+            </p>
+            <p>
+              ピアニスト: 小鳥舞
+            </p>
+          </div>
+        )}
 
         {close}
       </article>
