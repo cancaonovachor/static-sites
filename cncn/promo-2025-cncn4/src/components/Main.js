@@ -18,6 +18,10 @@ import kawata from '../images/kawata.png'
 import odorimai from '../images/odorimai.jpg'
 import ito from '../images/ito.jpg'
 import flyer from '../images/flyer.png'
+import kyodaiChorus from '../images/京大合唱団.png'
+import camphoraChorus from '../images/合唱団Camphora.png'
+import cestLaVieChorus from "../images/女声アンサンブルC'est La Vie.png"
+import hanamizukiChorus from '../images/混声合唱団「花みずき」.png'
 import { useMediaQuery } from 'react-responsive'
 
 
@@ -198,36 +202,48 @@ const Main = (props) => {
         
         <h3>合唱協賛</h3>
 
-        {/* <a
-          className="use-border"
-          href="https://twitter.com/"
-          target="_blank"
-        >
-          <b>After Times</b>
-        </a> */}
-        ・
-        <a className="use-border" href="https://x.com/camphora_choir" target="_blank">
-          合唱団Camphora
-        </a>
-        <br />・
-        <a className="use-border" href="https://cestlavie200910.blogspot.com/" target="_blank">
-          女声アンサンブルC'est La Vie
-        </a>
-        <br />・
         <a className="use-border" href="https://kuc.main.jp/" target="_blank">
-          京大合唱団
+          <b>京大合唱団</b>
         </a>
-        <br />・
-        <a className="use-border" href="https://x.com/chor_hanamizuki" target="_blank">
-          混声合唱団「花みずき」
-        </a>
+        <span className="image-main main">
+          <img src={kyodaiChorus} alt="京大合唱団" />
+        </span>
+        <p>
+          昭和6年創設の学生合唱団。近年はコロナ禍での団員減少で混声のみの活動となっていましたが、2025年度より伝統的な男女混の体制を復活させました。例年、春の発表会やサマーコンサート、冬の定期演奏会を開催し、様々なジャンルの曲に取り組んでいます。
+        </p>
         <br />
-        {/* <span className="image-main main">
-          <img src={tiamo} alt="" />
-        </span> */}
-        {/* <p>
-          ここに文章を挿入
-        </p> */}
+
+        <a className="use-border" href="https://x.com/camphora_choir" target="_blank">
+          <b>合唱団Camphora</b>
+        </a>
+        <span className="image-main main">
+          <img src={camphoraChorus} alt="合唱団Camphora" />
+        </span>
+        <p>
+          合唱団Camphora(カンフォーラ)です！20代を中心に幅広いメンバーで、林香世先生ご指導のもと活動しています。2025年は多くの演奏機会に恵まれ、団の成長を感じられる一年となりました。2026年も「集いて歌う」喜びを胸に、伸びやかに歌います！
+        </p>
+        <br />
+
+        <a className="use-border" href="https://cestlavie200910.blogspot.com/" target="_blank">
+          <b>女声アンサンブルC'est La Vie</b>
+        </a>
+        <span className="image-main main">
+          <img src={cestLaVieChorus} alt="女声アンサンブルC'est La Vie" />
+        </span>
+        <p>
+          CNCN4.0へのお招きありがとうございます。私達は2009年に結成。山口英樹先生を指揮者にお迎えし17年目を迎えます。メンバーはほぼシニア世代になりましたが、クリアなサウンドを求めて日々奮闘しています。春の風に乗って爽やかな演奏ができますように頑張りたいと思います。どうぞよろしくお願いします。
+        </p>
+        <br />
+
+        <a className="use-border" href="https://x.com/chor_hanamizuki" target="_blank">
+          <b>混声合唱団「花みずき」</b>
+        </a>
+        <span className="image-main main">
+          <img src={hanamizukiChorus} alt="混声合唱団「花みずき」" />
+        </span>
+        <p>
+          尼崎市立立花中学校合唱部の卒業生により2006年に結成。現在は、兵庫県だけでなく全国からメンバーが集い、酒井輝美の音楽観のもと、日々「花みずき」らしい音楽表現を追求している。第4回東京国際合唱コンクール室内部門にて1位金賞および最優秀課題曲賞を受賞し、グランプリコンクールに出場。
+        </p>
         <br />
         <h3>飲食協賛</h3>
         <a className="use-border" href="https://ichiji.net/" target="_blank">
