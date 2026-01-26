@@ -15,7 +15,8 @@ import volare from '../images/volare.jpeg'
 import kiito_senzai from '../images/cncn2-3rd.jpg'
 import access from '../images/access.jpg'
 import kawata from '../images/kawata.png'
-import odorimai from '../images/odorimai.jpg'
+import satotaku from '../images/佐藤拓.jpg'
+import odorimai from '../images/小鳥舞.jpg'
 import ito from '../images/ito.jpg'
 import flyer from '../images/flyer.png'
 import kyodaiChorus from '../images/京大合唱団.png'
@@ -184,7 +185,22 @@ const Main = (props) => {
               <br />時間： 14:00〜
             </p>
 
-            <h4>合唱協賛</h4>
+            <br />
+
+            <h3>基調講演</h3>
+
+            <b>佐藤 拓</b>
+            <p>
+              早稲田大学第一文学部卒業後イタリアに渡り声楽を学ぶ。歌手、合唱指揮者として活動しながら、日本や世界の民謡・民俗歌唱の実践と研究に取り組んでいる。近年はボイストレーナーとして自身の考案した「十種発声」を用いた発声指導を行っている。常民一座ビッキンダーズ座長。合唱衆RAZMONEA主宰・指揮者、東京稲門グリークラブ、合唱団ガイスマ指揮者。
+            </p>
+
+            <span className="image-main main">
+              <img src={satotaku} alt="佐藤拓" />
+            </span>
+
+            <br /><br />
+
+            <h3>合唱協賛</h3>
 
             <a className="use-border" href="https://kuc.main.jp/" target="_blank">
               <b>京大合唱団</b>
@@ -197,15 +213,16 @@ const Main = (props) => {
             </p>
             <br />
 
-            <a className="use-border" href="https://x.com/camphora_choir" target="_blank">
-              <b>合唱団Camphora</b>
+            <a className="use-border" href="https://x.com/chor_hanamizuki" target="_blank">
+              <b>混声合唱団「花みずき」</b>
             </a>
             <span className="image-main main">
-              <img src={camphoraChorus} alt="合唱団Camphora" />
+              <img src={hanamizukiChorus} alt="混声合唱団「花みずき」" />
             </span>
             <p>
-              合唱団Camphora(カンフォーラ)です！20代を中心に幅広いメンバーで、林香世先生ご指導のもと活動しています。2025年は多くの演奏機会に恵まれ、団の成長を感じられる一年となりました。2026年も「集いて歌う」喜びを胸に、伸びやかに歌います！
+              尼崎市立立花中学校合唱部の卒業生により2006年に結成。現在は、兵庫県だけでなく全国からメンバーが集い、酒井輝美の音楽観のもと、日々「花みずき」らしい音楽表現を追求している。第4回東京国際合唱コンクール室内部門にて1位金賞および最優秀課題曲賞を受賞し、グランプリコンクールに出場。
             </p>
+
             <br />
 
             <a className="use-border" href="https://cestlavie200910.blogspot.com/" target="_blank">
@@ -219,18 +236,19 @@ const Main = (props) => {
             </p>
             <br />
 
-            <a className="use-border" href="https://x.com/chor_hanamizuki" target="_blank">
-              <b>混声合唱団「花みずき」</b>
+            <a className="use-border" href="https://x.com/camphora_choir" target="_blank">
+              <b>合唱団Camphora</b>
             </a>
             <span className="image-main main">
-              <img src={hanamizukiChorus} alt="混声合唱団「花みずき」" />
+              <img src={camphoraChorus} alt="合唱団Camphora" />
             </span>
             <p>
-              尼崎市立立花中学校合唱部の卒業生により2006年に結成。現在は、兵庫県だけでなく全国からメンバーが集い、酒井輝美の音楽観のもと、日々「花みずき」らしい音楽表現を追求している。第4回東京国際合唱コンクール室内部門にて1位金賞および最優秀課題曲賞を受賞し、グランプリコンクールに出場。
+              合唱団Camphora(カンフォーラ)です！20代を中心に幅広いメンバーで、林香世先生ご指導のもと活動しています。2025年は多くの演奏機会に恵まれ、団の成長を感じられる一年となりました。2026年も「集いて歌う」喜びを胸に、伸びやかに歌います！
             </p>
+
             <br />
 
-            <h4>飲食協賛</h4>
+            <h3>飲食協賛</h3>
             <a className="use-border" href="https://ichiji.net/" target="_blank">
               <b>ICHIJI</b>
             </a>
@@ -242,6 +260,7 @@ const Main = (props) => {
             >
               <b>川上珈琲</b>
             </a>
+            <br /><br />
           </div>
         )}
 
@@ -263,17 +282,22 @@ const Main = (props) => {
             <p>時間： 15:30〜</p>
             <p>
               演奏予定曲：
-              <br />・君が代
+              <br />・君が代（編曲 三宅純）
+              <br />・君が代（編曲 上野哲生）
               <br />・上を向いて歩こう (編曲 北村協一)
-              <br />・中国地方の子守歌 (編曲 三善晃)
-              <br />・夕焼小焼 (編曲 三善晃)
               <br />・Furusato (編曲 Philip Lawson)
-              <br />・マツリマツル (鈴木憲夫)
+              <br />・夕焼小焼 (編曲 三善晃)
               <br />・もちつき (三木稔)
+              <br />・中国地方の子守歌 (編曲 三善晃)
               <br />・天の川 (藤嶋美穂)
+              <br />・マツリ マツル (鈴木憲夫)
             </p>
+            <h3>ピアニスト: 小鳥舞</h3>
+            <span className="image-main main">
+              <img src={odorimai} alt="" />
+            </span>
             <p>
-              ピアニスト: 小鳥舞
+              武庫川女子大学音楽学部演奏学科卒業。兵庫教育大学大学院修了。ピアノを奈良田朋子、木下千代の各氏に師事。武庫川女子大学新人演奏会をはじめ、様々な演奏会に出演。また、神戸フィルハーモニック、ウクライナ・リヴィウ国際音楽祭にてLviv Virtuosos Academic Chamber Ochestraと共演。東京国際芸術協会より受講費全額助成を受け、ウィーン国立音楽大学マスタークラスを修了し、教授選抜によるコンサートに出演。ディプロマを取得。現在、アンサンブルピアニストとして幅広く活動中。歌手・半﨑美子のシングル『地球へ』にピアニスト参加。混声合唱フロイデ21、関西大学初等部合唱部常任ピアニスト。
             </p>
           </div>
         )}
