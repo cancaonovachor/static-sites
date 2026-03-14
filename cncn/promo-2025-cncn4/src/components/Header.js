@@ -57,6 +57,17 @@ const Header = (props) => {
           <h1>
             <Countdown targetDate={target} />
           </h1> */}
+          <h1>
+            <a
+              className="use-border"
+              href="javascript:;"
+              onClick={() => {
+                props.onOpenArticle('session-docs')
+              }}
+            >
+              Session Docs
+            </a>
+          </h1>
         </div>
       </div>
       <nav>
