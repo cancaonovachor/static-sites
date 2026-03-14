@@ -385,7 +385,7 @@ const Main = (props) => {
         <h3>楽曲曲説＆パンフレット</h3>
         {isSp ? (
           <iframe
-            src="https://docs.google.com/presentation/d/e/2PACX-1vQRL034dMBOwWORF3CcUzGPN2Is62FXlp_66g6MEkKMbkjksjL-O5nKOHcVXwARmE1QZYRoY2Uhxfa-/embed?start=false&loop=false&delayms=3000"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vTveNWp5I_WlL1qSMh6KozH2gSEv5QTTFqRYR9D6Tr0Jc6JkSs1ssXq1B90tVnlon0Xrzx5wckNtzuT/pubembed?start=false&loop=false&delayms=3000"
             frameborder="0"
             width="100%"
             height="270"
@@ -395,7 +395,7 @@ const Main = (props) => {
           ></iframe>
         ) : (
           <iframe
-            src="https://docs.google.com/presentation/d/e/2PACX-1vQRL034dMBOwWORF3CcUzGPN2Is62FXlp_66g6MEkKMbkjksjL-O5nKOHcVXwARmE1QZYRoY2Uhxfa-/embed?start=false&loop=false&delayms=3000"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vTveNWp5I_WlL1qSMh6KozH2gSEv5QTTFqRYR9D6Tr0Jc6JkSs1ssXq1B90tVnlon0Xrzx5wckNtzuT/pubembed?start=false&loop=false&delayms=3000"
             frameborder="0"
             width="100%"
             height="565"
@@ -404,9 +404,9 @@ const Main = (props) => {
             webkitallowfullscreen="true"
           ></iframe>
         )}
-        <p>CNCN 3.0 の楽曲解説及びパンフレットです。<br />
+        <p>CNCN 4.0 の楽曲解説及びパンフレットです。<br />
         元のファイルは
-        <a className="use-border" href="https://docs.google.com/presentation/d/1FsZ3mZY7DL0sFOVaTbgWGWxnaYeJT2wPwp1DjHJywH8/edit?usp=sharing">
+        <a className="use-border" href="https://docs.google.com/presentation/d/e/2PACX-1vTveNWp5I_WlL1qSMh6KozH2gSEv5QTTFqRYR9D6Tr0Jc6JkSs1ssXq1B90tVnlon0Xrzx5wckNtzuT/pubembed?start=false&loop=false&delayms=3000">
           こちら
         </a>
         </p>
