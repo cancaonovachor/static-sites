@@ -22,6 +22,8 @@ jobs:
           filters: |
             promo-2025-cncn4:
               - 'cncn/promo-2025-cncn4/**'
+            promo-2026-cncn5:
+              - 'cncn/promo-2026-cncn5/**'
 
   deploy:
     needs: detect-changes
@@ -40,7 +42,7 @@ jobs:
           node-version: '22'
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: npm install -g pnpm@10.13.1
 
       - name: Install dependencies
         working-directory: cncn/${{ matrix.site }}

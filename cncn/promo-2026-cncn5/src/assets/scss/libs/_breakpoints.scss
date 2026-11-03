@@ -1,0 +1,174 @@
+/// Responsive Breakpoints
+/// モダンなメディアクエリシステム
+
+// Breakpoint定義
+// Mobile-firstアプローチに対応した柔軟な設定
+$breakpoints: (
+  xxsmall: 360px,
+  xsmall: 480px,
+  small: 736px,
+  medium: 980px,
+  large: 1280px,
+  xlarge: 1680px
+) !default;
+
+/// Breakpoint値を取得する
+/// @param {String} $name - Breakpoint名
+/// @return {Number} Breakpoint値（px）
+@function breakpoint($name) {
+  @if map-has-key($breakpoints, $name) {
+    @return map-get($breakpoints, $name);
+  }
+  @warn "Breakpoint `#{$name}` が見つかりません。利用可能なbreakpoint: #{map-keys($breakpoints)}";
+  @return null;
+}
+
+/// Min-width メディアクエリ (Mobile-first)
+/// 指定したbreakpoint以上の画面幅で適用
+/// @param {String} $name - Breakpoint名
+/// @example
+///   @include media-up(medium) {
+///     font-size: 18px;
+///   }
+@mixin media-up($name) {
+  $min: breakpoint($name);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+}
+
+/// Max-width メディアクエリ (Desktop-first)
+/// 指定したbreakpoint未満の画面幅で適用
+/// @param {String} $name - Breakpoint名
+/// @example
+///   @include media-down(medium) {
+///     font-size: 14px;
+///   }
+@mixin media-down($name) {
+  $max: breakpoint($name);
+  @if $max {
+    @media (max-width: ($max - 1px)) {
+      @content;
+    }
+  }
+}
+
+/// Range メディアクエリ
+/// 指定した範囲の画面幅で適用
+/// @param {String} $min-name - 最小breakpoint名
+/// @param {String} $max-name - 最大breakpoint名
+/// @example
+///   @include media-between(small, large) {
+///     font-size: 16px;
+///   }
+@mixin media-between($min-name, $max-name) {
+  $min: breakpoint($min-name);
+  $max: breakpoint($max-name);
+  @if $min and $max {
+    @media (min-width: $min) and (max-width: ($max - 1px)) {
+      @content;
+    }
+  }
+}
+
+/// 特定のbreakpointのみで適用
+/// @param {String} $name - Breakpoint名
+/// @example
+///   @include media-only(medium) {
+///     display: none;
+///   }
+@mixin media-only($name) {
+  $names: map-keys($breakpoints);
+  $index: index($names, $name);
+
+  @if $index {
+    $min: breakpoint($name);
+
+    @if $index < length($names) {
+      $next-name: nth($names, $index + 1);
+      $max: breakpoint($next-name);
+      @media (min-width: $min) and (max-width: ($max - 1px)) {
+        @content;
+      }
+    } @else {
+      @media (min-width: $min) {
+        @content;
+      }
+    }
+  }
+}
+
+/// カスタムメディアクエリ
+/// 任意のピクセル値でmin-widthメディアクエリを作成
+/// @param {Number} $width - 幅（px）
+/// @example
+///   @include media-custom(900px) {
+///     margin: 20px;
+///   }
+@mixin media-custom($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+/// カスタムメディアクエリ（max-width）
+/// 任意のピクセル値でmax-widthメディアクエリを作成
+/// @param {Number} $width - 幅（px）
+/// @example
+///   @include media-custom-down(900px) {
+///     margin: 10px;
+///   }
+@mixin media-custom-down($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+/// レスポンシブフォントサイズ
+/// Breakpointに応じてフォントサイズを変更
+/// @param {Map} $sizes - Breakpoint名とフォントサイズのマップ
+/// @example
+///   @include responsive-font-size((
+///     base: 14px,
+///     medium: 16px,
+///     large: 18px
+///   ));
+@mixin responsive-font-size($sizes) {
+  @if map-has-key($sizes, base) {
+    font-size: map-get($sizes, base);
+  }
+
+  @each $breakpoint, $size in $sizes {
+    @if $breakpoint != base {
+      @include media-up($breakpoint) {
+        font-size: $size;
+      }
+    }
+  }
+}
+
+/// レスポンシブスペーシング
+/// Breakpointに応じてmargin/paddingを変更
+/// @param {String} $property - CSSプロパティ名（margin, padding等）
+/// @param {Map} $values - Breakpoint名と値のマップ
+/// @example
+///   @include responsive-spacing(padding, (
+///     base: 10px,
+///     medium: 20px,
+///     large: 30px
+///   ));
+@mixin responsive-spacing($property, $values) {
+  @if map-has-key($values, base) {
+    #{$property}: map-get($values, base);
+  }
+
+  @each $breakpoint, $value in $values {
+    @if $breakpoint != base {
+      @include media-up($breakpoint) {
+        #{$property}: $value;
+      }
+    }
+  }
+}
