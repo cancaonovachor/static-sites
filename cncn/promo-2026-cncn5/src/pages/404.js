@@ -8,4 +8,6 @@ const NotFoundPage = () => (
   </Layout>
 )
 
+export const Head = () => <title>NOT FOUND | CancaoNova Chorus Next 5.0</title>
+
 export default NotFoundPage
