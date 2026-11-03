@@ -1,11 +1,22 @@
 {
-  "hosting": {
-    "site": "promo-2025-cncn4",
-    "public": "promo-2025-cncn4/public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+  "hosting": [
+    {
+      "site": "promo-2025-cncn4",
+      "public": "promo-2025-cncn4/public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "site": "promo-2026-cncn5",
+      "public": "promo-2026-cncn5/public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    }
+  ]
 }

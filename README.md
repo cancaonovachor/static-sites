@@ -16,6 +16,7 @@ GitHub ActionsとFirebase CLIを使用して、変更があったサイトのみ
 │       └── preview-firebase.yml   # Preview環境への自動デプロイ（PR）
 └── cncn/                          # CNCN関連のサイト
     ├── promo-2025-cncn4/          # CNCN 4.0 プロモーションサイト（Gatsby）
+    ├── promo-2026-cncn5/          # CNCN 5.0 ティザーサイト（Gatsby）
     └── firebase.json              # Firebase Hosting設定
 ```
 

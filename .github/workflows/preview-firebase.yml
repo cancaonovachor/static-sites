@@ -24,6 +24,8 @@ jobs:
           filters: |
             promo-2025-cncn4:
               - 'cncn/promo-2025-cncn4/**'
+            promo-2026-cncn5:
+              - 'cncn/promo-2026-cncn5/**'
 
   preview:
     needs: detect-changes
@@ -49,6 +51,10 @@ jobs:
       - name: Install dependencies
         working-directory: cncn/${{ matrix.site }}
         run: pnpm install --frozen-lockfile
+
+      - name: Run tests
+        working-directory: cncn/${{ matrix.site }}
+        run: pnpm run --if-present test
 
       - name: Build site
         working-directory: cncn/${{ matrix.site }}

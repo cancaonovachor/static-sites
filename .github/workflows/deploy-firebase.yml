@@ -22,6 +22,8 @@ jobs:
           filters: |
             promo-2025-cncn4:
               - 'cncn/promo-2025-cncn4/**'
+            promo-2026-cncn5:
+              - 'cncn/promo-2026-cncn5/**'
 
   deploy:
     needs: detect-changes
