@@ -27,7 +27,10 @@ const Header = () => {
             カンサォン・ノーヴァ {isMobile && <br />}コーラスネクスト 5.0
           </h1>
           <h3>Coming Soon</h3>
-          <h2>日程・会場は近日公開</h2>
+          <h2>日程は近日公開</h2>
+          <h2>
+            デザイン・クリエイティブセンター神戸 {isMobile && <br />}KIITOホール
+          </h2>
           <div style={{ height: '1rem' }}></div>
           <h1>チケット販売まで</h1>
           <h1>
