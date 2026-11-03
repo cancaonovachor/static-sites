@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import Countdown from './util/Countdown'
+import { TEASER_MOVIE_ID } from './VideoModal'
 
 const TICKET_SALE_DATE = new Date('2026-12-01T00:00:00+09:00')
 
-const Header = () => {
+const Header = ({ onOpenVideo }) => {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -38,6 +39,22 @@ const Header = () => {
           </h1>
         </div>
       </div>
+      <nav>
+        <ul>
+          <li>
+            <a
+              className="use-border"
+              href={`https://www.youtube.com/watch?v=${TEASER_MOVIE_ID}`}
+              onClick={(event) => {
+                event.preventDefault()
+                onOpenVideo()
+              }}
+            >
+              Teaser Movie
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
   )
 }
