@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Layout from '../components/layout'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import VideoModal from '../components/VideoModal'
 import ogpImage from '../images/cncn5-ogp.jpg'
 
 const DESCRIPTION =
@@ -11,6 +12,8 @@ const DESCRIPTION =
 
 const IndexPage = ({ location }) => {
   const [loading, setLoading] = useState('is-loading')
+  const [isVideoOpen, setIsVideoOpen] = useState(false)
+  const closeVideo = useCallback(() => setIsVideoOpen(false), [])
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -24,8 +27,9 @@ const IndexPage = ({ location }) => {
     <Layout location={location}>
       <div className={`body ${loading}`}>
         <div id="wrapper">
-          <Header />
+          <Header onOpenVideo={() => setIsVideoOpen(true)} />
           <Footer />
+          {isVideoOpen && <VideoModal onClose={closeVideo} />}
         </div>
         <div id="bg"></div>
       </div>
